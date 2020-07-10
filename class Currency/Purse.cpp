@@ -3,7 +3,7 @@
 #include <ctime>
 #include "Purse.h"
 
-//конструктор кошелька
+
 Purse::Purse()
 {
     USD.amount = 0;
@@ -13,7 +13,7 @@ Purse::Purse()
     history_create();
 }
 
-//вывод баланса в валюте
+
 double Purse::amount_currency(std::string cur)
 {
     if (!cur.compare("EUR"))
@@ -35,7 +35,7 @@ double Purse::amount_currency(std::string cur)
     }
 }
 
-//вывод баланса в рублях
+
 double Purse::amount_rubles(std::string cur)
 {
     if (!cur.compare("EUR"))
@@ -57,7 +57,7 @@ double Purse::amount_rubles(std::string cur)
     }
 }
 
-//смена курса
+
 void Purse::rate_change(std::string cur, double CUR_EUR)
 {
     if (!cur.compare("EUR"))
@@ -85,7 +85,7 @@ void Purse::rate_change(std::string cur, double CUR_EUR)
     }
 }
 
-//вывод курса
+
 double Purse::rate_get(std::string cur)
 {
     if (!cur.compare("EUR"))
@@ -111,7 +111,7 @@ double Purse::rate_get(std::string cur)
     }
 }
 
-//вывод общего баланса кошелька
+
 void Purse::current()
 {
     double rub_balance = EUR.get_rubles() + USD.get_rubles() + GBP.get_rubles();
@@ -124,7 +124,7 @@ void Purse::current()
     std::cout << "----------------------------------" << std::endl;
 }
 
-//Изменение суммы
+
 void Purse::transfer(std::string cur, double amount)
 {
     std::string to_history = "";

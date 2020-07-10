@@ -14,24 +14,24 @@
 class Currency
 {
 public:
-    //сумма в валюте
+    
     double amount = 0;
-    //курс евро к рублю
+    
     double RUB_EUR = 80.2153;
-    //курс определённой валюты к евро
+    
     double CUR_EUR = 1;
 
-    //получить валюту в рублях
+    
     double get_rubles();
-    //получить валюту в копейках
+    
     double get_kopek();
 protected:
-    //перевод в рубли
+    
     double to_rubles(double cur_amount);
 
-    //перевод в мелкую валюту
+    
     double to_lower(double high_currency);
-    //перевод в крупную валюту
+    
     double to_higher(double low_currency);
 };
 
